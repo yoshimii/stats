@@ -1,6 +1,9 @@
-// Skater details include:
-// season (year)
-// vs team
+// The bout property is the team the skater played against
+// cb: Cherry Bombs
+// hc: Hellcats
+// hr: Holy Rolleres
+// lpdf: Las Putas del Fuego
+// rs: Rhinestones
 
 const stats = [{
     skaterId: 2,
