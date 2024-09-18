@@ -1,7 +1,7 @@
 import React from "react";
 import Row from "./row";
-import allSkaters from "../../data/allSkaters";
-import stats from "../../data/ambi";
+import skaterDetails from "./data/skaterDetails";
+import stats from "./data/allSkaterStats";
 
 const Table = () => {
     const scoredWhileInPlay = stats.reduce((n, {scoredWhileInPlay}) => n + scoredWhileInPlay, 0)
@@ -18,7 +18,7 @@ const Table = () => {
         pointsAllowed,
         pointsLost,
     }
-    const allSkaterStats = allSkaters.map((skaterInfo) => {
+    const allSkaterStats = skaterDetails.map((skaterInfo) => {
         return {
             ...skaterInfo,
             ...ambiStats

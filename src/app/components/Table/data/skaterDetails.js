@@ -1,68 +1,76 @@
+import Aggro from '../SkaterPhotos/Aggro.jpg'
+import Ambi from '../SkaterPhotos/Ambi.jpg'
+import Anya from '../SkaterPhotos/Anya.jpg'
+import Beaux from '../SkaterPhotos/Beaux.jpg'
+import Bish from '../SkaterPhotos/Bish.jpg'
+import Bj from '../SkaterPhotos/Bj.jpg'
+import Boogie from '../SkaterPhotos/Aggro.jpg'
+import Cyd from '../SkaterPhotos/Cyd.jpg'
+import Habbitch from '../SkaterPhotos/Habbitch.jpg'
+import Salty from '../SkaterPhotos/Salty.jpg'
+import Slam from '../SkaterPhotos/Slam.jpg'
+
 const allSkaters = [{
     skaterName: 'Aggrobat',
-    skaterId: 'aggrobat',
     skaterNumber: '343m/s',
     team: 'Hellcats',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Aggro
 },{
     skaterName: 'Ambitchous',
-    skaterId: 'ambitchous',
     skaterNumber: '8055',
     team: 'Hellcats',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Ambi
 },{
     skaterName: 'Anya Marx',
-    skaterId: 'anya_marx',
     skaterNumber: '123',
     team: 'Cherry Bombs',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Anya
 },{
     skaterName: 'Assault & Vinegar',
-    skaterId: 'assault_&_vinegar',
     skaterNumber: 'NaCl',
     team: 'Holy Rollers',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Salty
 },{
     skaterName: 'Bad Habbitch',
     skaterNumber: 'fml',
     team: 'Las Putas del Fuego',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Habbitch
 },{
     skaterName: 'Beaux Dacious',
     skaterNumber: '21',
     team: 'Rhinestones',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Beaux
 },{
     skaterName: 'Beetle Jukes',
     skaterNumber: '3 T1MES',
     team: 'Hired Gun$',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Bj
 },{
     skaterName: 'Boogie Heights',
     skaterNumber: '77',
     team: 'Cherry Bombs',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Boogie
 },{
     skaterName: 'Cannabish',
     skaterNumber: 'W33D',
     team: 'Rhinestones',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Bish
 },{
     skaterName: 'Colonel Slamders',
     skaterNumber: '3AT M3',
     team: 'Rhinestones',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Slam
 },{
     skaterName: 'Cyd Vicious',
     skaterNumber: '1113',
     team: 'Hellcats',
-    photo: '/src/app/data/SkaterPhotos/aggrobat.jpg'
+    photo: Cyd
 }]
 
 export default allSkaters
 
 // Calculate:
-// position
+// position TO-DO: see if this is something we should do
 // games played
 // scored while in play
 // assists (star passes)
