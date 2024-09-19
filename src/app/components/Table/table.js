@@ -39,7 +39,6 @@ const Table = () => {
             pointsLost
         }
     })
-    const filteredSeasonStats = filterBy !== '' ? allSkaterSeasonStats.filter((s) => s.team === filterBy) : allSkaterSeasonStats
 
     const handleChange = (e) => {
         setFilterBy(e.target.value)
@@ -54,7 +53,9 @@ const Table = () => {
         setSortBy(targetName)
     }
 
-    useEffect(() => {   
+    useEffect(() => {
+        const filteredSeasonStats = filterBy !== '' ? allSkaterSeasonStats.filter((s) => s.team === filterBy) : allSkaterSeasonStats
+
         setSortedSkaters(filteredSeasonStats.sort(( a, b ) => {
             if(sortAscending){            
                 if ( a[sortBy] > b[sortBy] ){
@@ -74,52 +75,52 @@ const Table = () => {
                 return 0
             }
         }))
-    }, [sortBy])
-        
+    }, [sortBy, filterBy])
+    
     return (
-    <div className="flex flex-col items-center">
-        <div className="flex justify-start max-w-5xl min-w-60 w-min">
-            <select className='rounded w-44 h-8' onChange={handleChange}>
-                <option value=''>All Teams</option>
-                <option value='Cherry Bombs'>Cherry Bombs</option>
-                <option value='Hellcats'>Hellcats</option>
-                <option value='Hired Gun$'>Hired Guns</option>
-                <option value='Holy Rollers'>Holy Rollers</option>
-                <option value='Las Putas del Fuego'>Las Putas del Fuego</option>
-                <option value='Rhinestones'>Rhinestones</option>
-            </select>
+        <div className="flex flex-col items-center">
+            <div className="flex justify-start max-w-5xl min-w-60 w-min">
+                <select className='rounded w-44 h-8' onChange={handleChange}>
+                    <option value=''>All Teams</option>
+                    <option value='Cherry Bombs'>Cherry Bombs</option>
+                    <option value='Hellcats'>Hellcats</option>
+                    <option value='Hired Gun$'>Hired Guns</option>
+                    <option value='Holy Rollers'>Holy Rollers</option>
+                    <option value='Las Putas del Fuego'>Las Putas del Fuego</option>
+                    <option value='Rhinestones'>Rhinestones</option>
+                </select>
+            </div>
+            <table className="text-left">
+                <tbody>
+                <tr>
+                    <th className="pr-4" onClick={handleClick} name='skaterName'>Name</th>
+                    <th className="pr-4" name='skaterNumber'>Number</th>
+                    <th className="pr-4" onClick={handleClick} name='team'>Team</th>
+                    {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
+                    <th className="pr-4" name='gamesPlayed'>GP</th>
+                    <th className="pr-4" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
+                    <th className="pr-4" onClick={handleClick} name='assists'>A</th>
+                    <th className="pr-4" onClick={handleClick} name='overallPoints'>OP</th>
+                    <th className="pr-4" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
+                    <th className="pr-4" onClick={handleClick} name='jamCount'>JC</th>
+                    <th className="pr-4" onClick={handleClick} name='pointsAllowed'>PA</th>
+                    <th className="pr-4" onClick={handleClick} name='pointsLost'>PL</th>
+                </tr>
+                {sortedSkaters.map((s) => {
+                    return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber} 
+                    gamesPlayed={s.gamesPlayed} 
+                    scoredWhileInPlay={s.scoredWhileInPlay} 
+                    assists={s.assists}
+                    overallPoints={s.overallPoints}
+                    averagePointsPerJam={s.averagePointsPerJam}
+                    jamCount={s.jamCount}
+                    pointsAllowed={s.pointsAllowed}
+                    pointsLost={s.pointsLost}
+                    />
+                })}
+                </tbody>
+            </table>
         </div>
-        <table className="text-left">
-            <tbody>
-            <tr>
-                <th className="pr-4" onClick={handleClick} name='skaterName'>Name</th>
-                <th className="pr-4" name='skaterNumber'>Number</th>
-                <th className="pr-4" onClick={handleClick} name='team'>Team</th>
-                {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
-                <th className="pr-4" name='gamesPlayed'>GP</th>
-                <th className="pr-4" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
-                <th className="pr-4" onClick={handleClick} name='assists'>A</th>
-                <th className="pr-4" onClick={handleClick} name='overallPoints'>OP</th>
-                <th className="pr-4" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
-                <th className="pr-4" onClick={handleClick} name='jamCount'>JC</th>
-                <th className="pr-4" onClick={handleClick} name='pointsAllowed'>PA</th>
-                <th className="pr-4" onClick={handleClick} name='pointsLost'>PL</th>
-            </tr>
-            {sortedSkaters.map((s) => {
-                return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber} 
-                gamesPlayed={s.gamesPlayed} 
-                scoredWhileInPlay={s.scoredWhileInPlay} 
-                assists={s.assists}
-                overallPoints={s.overallPoints}
-                averagePointsPerJam={s.averagePointsPerJam}
-                jamCount={s.jamCount}
-                pointsAllowed={s.pointsAllowed}
-                pointsLost={s.pointsLost}
-                />
-            })}
-            </tbody>
-        </table>
-    </div>
     )
 }
 
