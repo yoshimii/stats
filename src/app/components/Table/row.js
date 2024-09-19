@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import logos from './data/teamLogos'
 
-const Row = ({photo, name, team, number, gamesPlayed, scoredWhileInPlay, assists, overallPoints, avgPointsPerJam, jamCount, pointsAllowed, pointsLost}) => {
+const Row = ({photo, name, team, number, gamesPlayed, scoredWhileInPlay, assists, overallPoints, averagePointsPerJam, jamCount, pointsAllowed, pointsLost}) => {
     return (
             <tr>
                 <td><Image alt={`${name} photo`} src={photo} width="43" height="43" className="rounded-full"/>{name}</td>
@@ -12,7 +12,7 @@ const Row = ({photo, name, team, number, gamesPlayed, scoredWhileInPlay, assists
                 <td>{scoredWhileInPlay}</td>
                 <td>{assists}</td>
                 <td>{overallPoints}</td>
-                <td>{avgPointsPerJam}</td>
+                <td>{averagePointsPerJam}</td>
                 <td>{jamCount}</td>
                 <td>{pointsAllowed}</td>
                 <td>{pointsLost}</td>
