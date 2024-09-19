@@ -43,17 +43,19 @@ const Table = () => {
         }
     })
 
+    const filteredSeasonStats = sortBy !== '' ? allSkaterSeasonStats.filter((s) => s.team === sortBy) : allSkaterSeasonStats
+    
     return (
     <div className="flex flex-col items-center">
         <div className="flex justify-start max-w-5xl min-w-60 w-min">
             <select onChange={handleChange}>
                 <option value=''>All Teams</option>
-                <option value='cherryBombs'>Cherry Bombs</option>
-                <option value='hellcats'>Hellcats</option>
-                <option value='hiredGuns'>Hired Guns</option>
-                <option value='holyRollers'>Holy Rollers</option>
-                <option value='lasPutasDelFuego'>Las Putas del Fuego</option>
-                <option value='rhinestones'>Rhinestones</option>
+                <option value='Cherry Bombs'>Cherry Bombs</option>
+                <option value='Hellcats'>Hellcats</option>
+                <option value='Hired Gun$'>Hired Guns</option>
+                <option value='Holy Rollers'>Holy Rollers</option>
+                <option value='Las Putas del Fuego'>Las Putas del Fuego</option>
+                <option value='Rhinestones'>Rhinestones</option>
             </select>
         </div>
         <table className="text-left">
@@ -72,7 +74,7 @@ const Table = () => {
                 <th className="pr-4">PA</th>
                 <th className="pr-4">PL</th>
             </tr>
-            {allSkaterSeasonStats.map((s) => {
+            {filteredSeasonStats.map((s) => {
                 return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber} 
                 gamesPlayed={s.gamesPlayed} 
                 scoredWhileInPlay={s.scoredWhileInPlay} 
