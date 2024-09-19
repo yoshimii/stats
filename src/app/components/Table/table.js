@@ -84,7 +84,7 @@ const Table = () => {
                     <option value=''>All Teams</option>
                     <option value='Cherry Bombs'>Cherry Bombs</option>
                     <option value='Hellcats'>Hellcats</option>
-                    <option value='Hired Gun$'>Hired Guns</option>
+                    <option value='Hired Gun$'>Hired Gun$</option>
                     <option value='Holy Rollers'>Holy Rollers</option>
                     <option value='Las Putas del Fuego'>Las Putas del Fuego</option>
                     <option value='Rhinestones'>Rhinestones</option>
