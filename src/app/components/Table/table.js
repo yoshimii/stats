@@ -44,11 +44,11 @@ const Table = () => {
     })
 
     const filteredSeasonStats = sortBy !== '' ? allSkaterSeasonStats.filter((s) => s.team === sortBy) : allSkaterSeasonStats
-    
+
     return (
     <div className="flex flex-col items-center">
         <div className="flex justify-start max-w-5xl min-w-60 w-min">
-            <select onChange={handleChange}>
+            <select className='rounded w-44 h-8' onChange={handleChange}>
                 <option value=''>All Teams</option>
                 <option value='Cherry Bombs'>Cherry Bombs</option>
                 <option value='Hellcats'>Hellcats</option>
