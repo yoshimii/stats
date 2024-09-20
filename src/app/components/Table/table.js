@@ -78,7 +78,7 @@ const Table = () => {
     }, [sortBy, filterBy])
     
     return (
-        <div className="flex flex-col items-center overflow-x-auto">
+        <div className="flex flex-col items-start lg:items-center overflow-x-auto">
             <div className="flex justify-start max-w-5xl min-w-60 w-min">
                 <select className='rounded w-44 h-8' onChange={handleChange}>
                     <option value=''>All Teams</option>
