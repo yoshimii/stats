@@ -93,18 +93,19 @@ const Table = () => {
             <table className="text-left">
                 <tbody>
                 <tr>
-                    <th className="pr-4" onClick={handleClick} name='skaterName'>Name</th>
+                    <th></th>
+                    <th className="pr-4 underline" onClick={handleClick} name='skaterName'>Name</th>
                     <th className="pr-4" name='skaterNumber'>Number</th>
-                    <th className="pr-4" onClick={handleClick} name='team'>Team</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='team'>Team</th>
                     {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
                     <th className="pr-4" name='gamesPlayed'>GP</th>
-                    <th className="pr-4" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
-                    <th className="pr-4" onClick={handleClick} name='assists'>A</th>
-                    <th className="pr-4" onClick={handleClick} name='overallPoints'>OP</th>
-                    <th className="pr-4" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
-                    <th className="pr-4" onClick={handleClick} name='jamCount'>JC</th>
-                    <th className="pr-4" onClick={handleClick} name='pointsAllowed'>PA</th>
-                    <th className="pr-4" onClick={handleClick} name='pointsLost'>PL</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='assists'>A</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='overallPoints'>OP</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='jamCount'>JC</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='pointsAllowed'>PA</th>
+                    <th className="pr-4 underline" onClick={handleClick} name='pointsLost'>PL</th>
                 </tr>
                 {sortedSkaters.map((s) => {
                     return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber} 
