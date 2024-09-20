@@ -12,11 +12,33 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      maxWidth: {
-        "max-w-screen-xl": "1400px",
-        "max-w-60": "234px"
-      }
     },
+    maxWidth: {
+      "7xl": "1400px",
+      "w-60": "234px",
+    },
+    width: {
+      "44": "175px",
+      "48": "190px",
+      "60": "235px"
+    },
+    height: {
+      "14": "60px",
+      "48": "198px",
+      "56": "220px",
+      "60": "248px",
+      "96": "376px"
+    },
+    fontSize: {
+      "5xl": "50px",
+      "7xl": "72px",
+      "9xl": "120px"
+    },
+    screens: {
+      md: '600px',
+      lg: '925px',
+      xl: '1200px'
+    }
   },
   plugins: [],
 };
