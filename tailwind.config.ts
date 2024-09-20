@@ -13,6 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
     },
+    minWidth: {
+      "w-14": "53px"
+    },
     maxWidth: {
       "7xl": "1400px",
       "w-60": "234px",
@@ -20,7 +23,8 @@ const config: Config = {
     width: {
       "44": "175px",
       "48": "190px",
-      "60": "235px"
+      "60": "235px",
+      "11/12": "94%"
     },
     height: {
       "14": "60px",

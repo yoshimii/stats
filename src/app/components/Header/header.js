@@ -8,7 +8,7 @@ const permanentMarker = Permanent_Marker({ subsets: ['latin'], weight: '400' })
 const Header = () => {
     return (
         <header className="flex flex-col content-center max-w-full bg-black">
-            <nav className="flex h-14 px-4 w-full max-w-7xl"> 
+            <nav className="flex h-14 px-4 w-11/12 xl:max-w-7xl self-center"> 
                 <div className="content-center max-w-60">
                     <Image alt="Texas Roller Derby Logo" src="/logo.svg" width="190" height="35" className="w-44 md:w-48 xl:w-60"/>
                 </div>
