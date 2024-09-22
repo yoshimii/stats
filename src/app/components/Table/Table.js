@@ -75,7 +75,7 @@ const Table = () => {
                 return 0
             }
         }))
-    }, [sortBy, filterBy])
+    }, [allSkaterSeasonStats, sortAscending, sortBy, filterBy])
     
     return (
         <div className="flex flex-col items-start lg:items-center overflow-x-auto">
