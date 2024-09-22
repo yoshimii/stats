@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import Row from "./row";
+import Row from "./Row";
 import skaterDetails from "./data/skaterDetails";
 import stats from "./data/allSkaterStats";
 
