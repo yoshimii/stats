@@ -96,7 +96,6 @@ const Table = () => {
                         <tr className="text-center">
                             <th className="px-2 text-center bg-black text-white" ></th>
                             <th className={`px-2 text-center underline ${sortBy === 'skaterName' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='skaterName'>Name</th>
-                            <th className="px-2 text-center bg-black text-white" name='skaterNumber'>Number</th>
                             <th className={`px-2 text-center underline ${sortBy === 'team' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='team'>Team</th>
                             {/* <th className="px-2 text-center" onClick={handleClick}>Position</th> */}
                             <th className="px-2 text-center bg-black text-white" name='gamesPlayed'>GP</th>
@@ -109,7 +108,11 @@ const Table = () => {
                             <th className={`px-2 text-center underline ${sortBy === 'pointsLost' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='pointsLost'>PL</th>
                         </tr>
                         {sortedSkaters.map((s) => {
-                            return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber}
+                            return <Row
+                                key={s.skaterName}
+                                photo={s.photo}
+                                name={s.skaterName}
+                                team={s.team}
                                 gamesPlayed={s.gamesPlayed}
                                 scoredWhileInPlay={s.scoredWhileInPlay}
                                 assists={s.assists}
