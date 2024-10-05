@@ -323,7 +323,7 @@ const allSkaters = [{
     photo: Bastard
 }, {
     skaterId: 44,
-    skaterName: ' Pentaglam',
+    skaterName: 'Pentaglam',
     skaterNumber: 'R10T',
     team: 'Las Putas del Fuego',
     photo: Glam
