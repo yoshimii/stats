@@ -91,7 +91,7 @@ const Table = () => {
                 </select>
             </div>
             <div className="flex flex-col items-start lg:items-center overflow-x-auto">
-                <table className="text-left">
+                <table className="text-left mx-2">
                     <tbody>
                         <tr className="text-center">
                             <th className="px-2 text-center bg-black text-white" ></th>
