@@ -16,7 +16,7 @@ const Header = () => {
             <div className="flex flex-col relative text-white">
                 <Image alt="decorative grunge texture" src="/top.png" layout="responsive" width="234" height="43" className="absolute z-40" />
                 <div className="bg-[url('/helmets.jpg')] bg-cover h-48 md:h-56 lg:h-96 relative bg-center"></div>
-                <Image alt="decorative grunge texture" src="/bottom.png" layout="responsive" width="234" height="43" className="absolute -bottom-px" />
+                <Image alt="decorative grunge texture" src="/bottom.png" layout="responsive" width="234" height="43" className="absolute -bottom-1" />
                 <p className={`absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ${permanentMarker.className} text-5xl md:text-7xl lg:text-9xl`}>Statistics</p>
             </div>
         </header>
