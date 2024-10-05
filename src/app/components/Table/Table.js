@@ -94,7 +94,7 @@ const Table = () => {
                 <table className="text-left mx-2">
                     <tbody>
                         <tr className="text-center">
-                            <th className="px-2 text-center bg-black text-white" ></th>
+                            <th className={`px-2 text-center ${sortBy === 'skaterName' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} ></th>
                             <th className={`px-2 text-center underline ${sortBy === 'skaterName' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='skaterName'>Name</th>
                             <th className={`px-2 text-center underline ${sortBy === 'team' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='team'>Team</th>
                             {/* <th className="px-2 text-center" onClick={handleClick}>Position</th> */}
