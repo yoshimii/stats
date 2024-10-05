@@ -75,7 +75,7 @@ const Table = () => {
                 return 0
             }
         }))
-    }, [allSkaterSeasonStats, sortAscending, sortBy, filterBy])
+    }, [sortAscending, sortBy, filterBy])
 
     return (
         <>
@@ -93,20 +93,20 @@ const Table = () => {
             <div className="flex flex-col items-start lg:items-center overflow-x-auto">
                 <table className="text-left">
                     <tbody>
-                        <tr>
-                            <th></th>
-                            <th className="pr-4 underline" onClick={handleClick} name='skaterName'>Name</th>
-                            <th className="pr-4" name='skaterNumber'>Number</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='team'>Team</th>
-                            {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
-                            <th className="pr-4" name='gamesPlayed'>GP</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='assists'>A</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='overallPoints'>OP</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='jamCount'>JC</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='pointsAllowed'>PA</th>
-                            <th className="pr-4 underline" onClick={handleClick} name='pointsLost'>PL</th>
+                        <tr className="text-center">
+                            <th className="px-2 text-center bg-black text-white" ></th>
+                            <th className={`px-2 text-center underline ${sortBy === 'skaterName' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='skaterName'>Name</th>
+                            <th className="px-2 text-center bg-black text-white" name='skaterNumber'>Number</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'team' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='team'>Team</th>
+                            {/* <th className="px-2 text-center" onClick={handleClick}>Position</th> */}
+                            <th className="px-2 text-center bg-black text-white" name='gamesPlayed'>GP</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'scoredWhileInPlay' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'assists' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='assists'>A</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'overallPoints' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='overallPoints'>OP</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'averagePointsPerJam' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='averagePointsPerJam'>APJ</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'jamCount' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='jamCount'>JC</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'pointsAllowed' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='pointsAllowed'>PA</th>
+                            <th className={`px-2 text-center underline ${sortBy === 'pointsLost' ? 'bg-[#b01a1a82] text-black' : 'bg-black text-white'}`} onClick={handleClick} name='pointsLost'>PL</th>
                         </tr>
                         {sortedSkaters.map((s) => {
                             return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber}
@@ -118,6 +118,7 @@ const Table = () => {
                                 jamCount={s.jamCount}
                                 pointsAllowed={s.pointsAllowed}
                                 pointsLost={s.pointsLost}
+                                sortBy={sortBy}
                             />
                         })}
                     </tbody>
