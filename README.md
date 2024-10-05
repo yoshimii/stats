@@ -37,12 +37,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## To-Do
 
-- [ ] add break points (including images)
+- [ x ] add break points (including images)
 - [ ] add nav links
-- [ ] get custom theme to work (ex: maxWidth)
-- [ ] add sorting
+- [ x ] get custom theme to work (ex: maxWidth)
+- [ x ] add sorting
 - [ ] add skater link and page
 - [ ] add season header to table
 - [ ] add season filter to table
+- [ ] add total results count to table
 
 
