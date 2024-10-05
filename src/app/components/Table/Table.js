@@ -78,9 +78,9 @@ const Table = () => {
     }, [allSkaterSeasonStats, sortAscending, sortBy, filterBy])
 
     return (
-        <div className="flex flex-col items-start lg:items-center overflow-x-auto">
-            <div className="flex justify-start max-w-5xl min-w-60 w-min">
-                <select className='rounded w-44 h-8' onChange={handleChange}>
+        <>
+            <div className="flex justify-center max-w-5xl min-w-60 w-min">
+                <select className='rounded w-44 border border-black h-8 m-4' onChange={handleChange}>
                     <option value=''>All Teams</option>
                     <option value='Cherry Bombs'>Cherry Bombs</option>
                     <option value='Hellcats'>Hellcats</option>
@@ -90,38 +90,40 @@ const Table = () => {
                     <option value='Rhinestones'>Rhinestones</option>
                 </select>
             </div>
-            <table className="text-left">
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <th className="pr-4 underline" onClick={handleClick} name='skaterName'>Name</th>
-                        <th className="pr-4" name='skaterNumber'>Number</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='team'>Team</th>
-                        {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
-                        <th className="pr-4" name='gamesPlayed'>GP</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='assists'>A</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='overallPoints'>OP</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='jamCount'>JC</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='pointsAllowed'>PA</th>
-                        <th className="pr-4 underline" onClick={handleClick} name='pointsLost'>PL</th>
-                    </tr>
-                    {sortedSkaters.map((s) => {
-                        return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber}
-                            gamesPlayed={s.gamesPlayed}
-                            scoredWhileInPlay={s.scoredWhileInPlay}
-                            assists={s.assists}
-                            overallPoints={s.overallPoints}
-                            averagePointsPerJam={s.averagePointsPerJam}
-                            jamCount={s.jamCount}
-                            pointsAllowed={s.pointsAllowed}
-                            pointsLost={s.pointsLost}
-                        />
-                    })}
-                </tbody>
-            </table>
-        </div>
+            <div className="flex flex-col items-start lg:items-center overflow-x-auto">
+                <table className="text-left">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th className="pr-4 underline" onClick={handleClick} name='skaterName'>Name</th>
+                            <th className="pr-4" name='skaterNumber'>Number</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='team'>Team</th>
+                            {/* <th className="pr-4" onClick={handleClick}>Position</th> */}
+                            <th className="pr-4" name='gamesPlayed'>GP</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='scoredWhileInPlay'>SWIP</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='assists'>A</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='overallPoints'>OP</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='averagePointsPerJam'>APJ</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='jamCount'>JC</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='pointsAllowed'>PA</th>
+                            <th className="pr-4 underline" onClick={handleClick} name='pointsLost'>PL</th>
+                        </tr>
+                        {sortedSkaters.map((s) => {
+                            return <Row key={s.skaterName} photo={s.photo} name={s.skaterName} team={s.team} number={s.skaterNumber}
+                                gamesPlayed={s.gamesPlayed}
+                                scoredWhileInPlay={s.scoredWhileInPlay}
+                                assists={s.assists}
+                                overallPoints={s.overallPoints}
+                                averagePointsPerJam={s.averagePointsPerJam}
+                                jamCount={s.jamCount}
+                                pointsAllowed={s.pointsAllowed}
+                                pointsLost={s.pointsLost}
+                            />
+                        })}
+                    </tbody>
+                </table>
+            </div>
+        </>
     )
 }
 
